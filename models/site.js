@@ -1,10 +1,11 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
+
 const siteSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  location: { type: String, required: true },
-  depth: { type: Number, required: true },
-  commonSpecies: { type: String, required: true },
-  dificultyLevel: { type: String, required: true }
+  name: { type: String},
+  location: { type: String},
+  depth: { type: Number},
+  commonSpecies: { type: String},
+  dificultyLevel: { type: String}
 });
 
-module.exports = mongoose.model('site', siteSchema);
+module.exports = mongoose.model('Site', siteSchema);

@@ -1,4 +1,4 @@
-const DB_URI = 'mongodb://localhost/jammin';
+const DB_URI = 'mongodb://localhost/dive-sites';
 const PORT = 8000;
 
 module.exports = {
