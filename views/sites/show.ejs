@@ -1,7 +1,11 @@
-<div class="column is-full">
+<div class="columns is-full">
   <div class="column is-half is-left">
-    <img src=<%= site.picture %> alt="">
-
+    <img class="image is-256x256"src=<%= site.picture %> alt=<%= site.name %>/>
   </div>
-
+  <div class="column is-half is-right">
+    <h2 class="title is-3"><%= site.name %></h2>
+    <h2 class="subtitle is-4"><%= site.location %>
+    <p class=" subtitle is-6"><%=site.difficultyLevel%></p></h2>
+    <p><%= site.description %></p>
+  </div>
 </div>

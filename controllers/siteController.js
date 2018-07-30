@@ -21,16 +21,6 @@ function sitesShow(req, res) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 module.exports = {
   index: sitesIndex,
   show: sitesShow
