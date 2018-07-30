@@ -8,7 +8,16 @@ router.get('/_about', (req, res) => res.render('pages/_about'));
 router.route('/sites/index')
   .get(siteController.index);
 
+router.route('/sites/new')
+  .get(siteController.new);
+
+router.route('/sites')
+  .post(siteController.create);
+
 router.route('/sites/:id')
   .get(siteController.show);
+
+
+
 
 module.exports = router;

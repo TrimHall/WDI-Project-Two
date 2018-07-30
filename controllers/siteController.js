@@ -14,14 +14,26 @@ function sitesShow(req, res) {
   Site
     .findById(siteId)
     .then(site => res.render('sites/show', {site}));
-  console.log('we are in siteshow Site');
 }
 
+function sitesNew(req, res) {
+  res.render('sites/new');
+}
+
+function sitesCreate(req, res) {
+  console.log(req.body);
+  Site
+    .create(req.body)
+    .then(() => res.redirect('/sites/index'))
+    .catch(err => console.log(err));
+}
 
 
 
 
 module.exports = {
   index: sitesIndex,
-  show: sitesShow
+  show: sitesShow,
+  new: sitesNew,
+  create: sitesCreate
 };
