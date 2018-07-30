@@ -9,6 +9,29 @@ function sitesIndex(req, res) {
     });
 }
 
+function sitesShow(req, res) {
+  const siteId = req.params.id;
+  Site
+    .findById(siteId)
+    .then(site => res.render('sites/show', {site}));
+  console.log('we are in siteshow Site');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = {
-  index: sitesIndex
+  index: sitesIndex,
+  show: sitesShow
 };

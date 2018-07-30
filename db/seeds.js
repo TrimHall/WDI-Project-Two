@@ -12,7 +12,7 @@ Site
       name: 'Chumphon Pinacle',
       location: 'Koh Tao, Thailand',
       depth: 40,
-      picture: 'https://www.google.co.uk/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjOsfaMvMbcAhVCqxoKHWYQAEUQjRx6BAgBEAU&url=https%3A%2F%2Fwww.phoenixdiverskohtao.com%2Fchumphon-pinnacle-koh-tao%2F&psig=AOvVaw2eCbEeEzuUDdCm5BiLjn1c&ust=1533027776729453',
+      picture: 'https://res.cloudinary.com/teepublic/image/private/s--UiWmKxBE--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1512111245/production/designs/2125678_1.jpg',
       commonSpecies: [
         'Whale Shark',
         'Barracuda',
