@@ -1,5 +1,5 @@
 <nav class="navbar is-info">
-  <div class="container is-mobile">
+  <div class="container">
     <div class="navbar-left">
       <div class="navbar-brand">
       </div>
@@ -10,10 +10,7 @@
           <img src="https://img.memecdn.com/scuba-diver-baby_o_2364769.jpg">
           <!-- <img src="https://res.cloudinary.com/teepublic/image/private/s--UiWmKxBE--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1512111245/production/designs/2125678_1.jpg"> -->
         </figure>
-        <% if(!locals.isLoggedIn) { %>
-          <a class ="navbar-item" href="/registrations/new">Sign up</a>
-          <a class ="navbar-item" href="/sessions/new">Login</a>
-          <%  } else { %>
+        <% if(locals.isLoggedIn) { %>
             <a class ="navbar-item" href="/">Home</a>
             <a class ="navbar-item" href="/_about">About</a>
             <a class ="navbar-item" href="/sites/index">All sites</a>

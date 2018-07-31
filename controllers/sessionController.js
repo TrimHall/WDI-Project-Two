@@ -6,7 +6,6 @@ function sessionsNew(req, res) {
 }
 
 function sessionsCreate(req, res) {
-  console.log('we are in SessionsCreate');
   User
     .findOne({ email: req.body.email })
     .then(user => {
@@ -15,7 +14,7 @@ function sessionsCreate(req, res) {
       } else {
         req.flash('primary', `Welcome back ${user.username}!`);
         req.session.userId = user.id;
-        res.redirect('/'); // login was successful so redirect to home
+        res.redirect('/'); // login was successful so redirect to profile
       }
     });
 }
