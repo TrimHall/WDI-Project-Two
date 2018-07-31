@@ -5,7 +5,20 @@
   <div class="column is-half is-right">
     <h2 class="title is-3"><%= site.name %></h2>
     <h2 class="subtitle is-4"><%= site.location %>
-    <p class=" subtitle is-6"><%=site.difficultyLevel%></p></h2>
-    <p><%= site.description %></p>
+      <p class=" subtitle is-6"><%=site.difficultyLevel%></p></h2>
+      <p><%= site.description %></p>
+    </div>
   </div>
-</div>
+  <div class="column">
+    <div class="Level">
+      <div class="level-left">
+        <a class="button is-info" href="/sites/<%= site.id %>/edit">Edit</a>
+      </div>
+      <div class="level-right">
+        <form class="" action="/sites/<%= site.id %>" method="POST">
+          <button class="button is-danger">Delete</button>
+          <input type="hidden" name="_method" value="DELETE">
+        </form>
+      </div>
+    </div>
+  </div>

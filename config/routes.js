@@ -7,6 +7,8 @@ const sessionController = require('../controllers/sessionController');
 router.get('/', (req, res) => res.render('pages/_home'));
 router.get('/_about', (req, res) => res.render('pages/_about'));
 
+router.get('/sites/:id/edit', siteController.edit);
+
 router.route('/sites/index')
   .get(siteController.index);
 
@@ -32,9 +34,9 @@ router.route('/sites')
   .post(siteController.create);
 
 router.route('/sites/:id')
-  .get(siteController.show);
-
-
+  .get(siteController.show)
+  .put(siteController.update)
+  .delete(siteController.delete);
 
 
 

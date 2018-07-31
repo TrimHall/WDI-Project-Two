@@ -28,12 +28,34 @@ function sitesCreate(req, res) {
     .catch(err => console.log(err));
 }
 
+function sitesEdit(req, res) {
+  Site
+    .findById(req.params.id)
+    .then(site => res.render('sites/edit', {site}))
+    .catch(err => console.log(err));
+}
 
+function sitesUpdate(req, res) {
+  Site
+    .findByIdAndUpdate(req.params.id, req.body)
+    .then(() => res.redirect('/sites/index'))
+    .catch(err => console.log(err));
+}
 
+function sitesDelete(req, res) {
+  console.log('we are in sitesDelete');
+  Site
+    .findByIdAndDelete(req.params.id)
+    .then(() => res.redirect('/sites/index'))
+    .catch(err => console.log(err));
+}
 
 module.exports = {
   index: sitesIndex,
   show: sitesShow,
   new: sitesNew,
-  create: sitesCreate
+  create: sitesCreate,
+  edit: sitesEdit,
+  update: sitesUpdate,
+  delete: sitesDelete
 };

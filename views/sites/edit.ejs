@@ -1,0 +1,44 @@
+<h2 class="title is-2">Edit <%= site.name %></h2>
+
+<form action="/sites/<%= site.id %>" method="POST">
+
+  <label class="label" for="name">Name</label>
+  <div class="control">
+    <input name="name" value="<%= site.name %>" class="input" type="text">
+  </div>
+
+  <label class="label" for="name">Location</label>
+  <div class="control">
+    <input name="location" value="<%= site.location %>" class="input" type="text">
+  </div>
+
+  <label class="label" for="name">Max depth</label>
+  <div class="control">
+    <input name="depth" value="<%= site.depth %>" class="input" type="text">
+  </div>
+
+  <label class="label" for="name">Picture</label>
+  <div class="control">
+    <input name="picture" value="<%= site.picture %>" class="input" type="text">
+  </div>
+
+  <label class="label" for="name">Common species</label>
+  <div class="control">
+    <input name="commonSpecies" value="<%= site.commonSpecies %>" class="input" type="text">
+  </div>
+
+  <label class="label" for="name">Difficulty level</label>
+  <div class="control">
+    <input name="difficultyLevel" value="<%= site.difficultyLevel %>" class="input" type="text">
+  </div>
+
+  <label class="label" for="name">Description</label>
+  <div class="control">
+    <textarea name="description" class="input" type="text"><%= site.description %></textarea>
+  </div>
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <button class="button is-info">Submit</button>
+
+</form>
