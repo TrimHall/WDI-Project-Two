@@ -1,4 +1,4 @@
-<div class="columns is-full is-mobile">
+<div class="columns is-full">
   <div class="column is-half is-left">
     <img class="image is-256x256"src=<%= site.picture %> alt=<%= site.name %>/>
   </div>
@@ -10,14 +10,21 @@
   </div>
 </div>
 
-<div class="level">
-  <div class="level-left">
-    <a class="button is-info" href="/sites/<%= site.id %>/edit">Edit</a>
-  </div>
-  <div class="level-right">
-    <button class="button is-danger">Delete</button>
-    <form action="/sites/<%= site.id %>" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-    </form>
+<div class="container">
+  <div class="level is-mobile">
+    <div class="level-left is-one-third-mobile">
+      <a class="button is-info" href="/sites/<%= site.id %>/edit">Edit</a>
+    </div>
+
+    <div class="level-center is-one-third-mobile">
+      <button class="button is-primary">Review</button>
+    </div>
+
+    <div class="level-right is-one-third-mobile">
+      <form action="/sites/<%= site.id %>" method="POST">
+      <button class="button is-danger">Delete</button>
+        <input type="hidden" name="_method" value="DELETE">
+      </form>
+    </div>
   </div>
 </div>
