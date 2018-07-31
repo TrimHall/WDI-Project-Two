@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const siteController = require('../controllers/siteController');
 const registrationController = require('../controllers/registrationController');
+const sessionController = require('../controllers/sessionController');
 
 router.get('/', (req, res) => res.render('pages/_home'));
 router.get('/_about', (req, res) => res.render('pages/_about'));
@@ -14,6 +15,12 @@ router.route('/registrations/new')
 
 router.route('/registrations')
   .post(registrationController.create);
+
+router.route('/sessions/new')
+  .get(sessionController.new);
+
+router.route('/sessions')
+  .post(sessionController.create);
 
 router.route('/sites/new')
   .get(siteController.new);

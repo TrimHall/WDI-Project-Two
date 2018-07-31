@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-// const PORT = 8000;
 const { PORT, DB_URI } = require('./config/environment');
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -8,6 +7,9 @@ mongoose.connect(DB_URI);
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const flash = require('express-flash');
+const session = require('express-session');
+const User = require('./models/user');
 
 
 
@@ -30,6 +32,27 @@ app.use(methodOverride((req) => {
     return method;
   }
 }));
+
+app.use(session({
+  secret: 'thiscouldbeanything',
+  resave: false,
+  saveUninitialized: false
+}));
+
+// checks the session cookie for a user
+app.use((req, res, next) => {
+  if(!req.session.userId) return next();
+  User
+    .findById(req.session.userId)
+    .then(user => {
+      res.locals.user = user;
+      res.locals.isLoggedIn = true;
+      next();
+    });
+});
+app.use(flash());
+
+
 
 const router = require('./config/routes');
 app.use(router);
