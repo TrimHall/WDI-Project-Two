@@ -13,7 +13,7 @@ function sessionsCreate(req, res) {
       if(!user || !user.validatePassword(req.body.password)) {
         res.status(401).render('sessions/new', { message: 'Try again' });
       } else {
-        // req.flash('primary', `Welcome back ${user.username}!`);
+        req.flash('primary', `Welcome back ${user.username}!`);
         req.session.userId = user.id;
         res.redirect('/'); // login was successful so redirect to home
       }

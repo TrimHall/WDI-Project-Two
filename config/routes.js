@@ -22,6 +22,9 @@ router.route('/sessions/new')
 router.route('/sessions')
   .post(sessionController.create);
 
+router.route('/sessions/delete')
+  .get(sessionController.delete);
+
 router.route('/sites/new')
   .get(siteController.new);
 
@@ -30,6 +33,7 @@ router.route('/sites')
 
 router.route('/sites/:id')
   .get(siteController.show);
+
 
 
 

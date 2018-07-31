@@ -1,3 +1,11 @@
+<% if(locals.message) { %>
+  <div class="message is-danger">
+    <div class="message-body">
+      <%= message %>
+    </div>
+  </div>
+<% } %>
+
 <form method="POST" action="/sessions">
   <div class="field">
     <label for="email">Email</label>
