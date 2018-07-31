@@ -3,6 +3,7 @@ const router = express.Router();
 const siteController = require('../controllers/siteController');
 const registrationController = require('../controllers/registrationController');
 const sessionController = require('../controllers/sessionController');
+const reviewController = require('../controllers/reviewController');
 
 router.get('/', (req, res) => res.render('pages/_home'));
 router.get('/_about', (req, res) => res.render('pages/_about'));
@@ -14,6 +15,9 @@ router.route('/sites/index')
 
 router.route('/registrations/new')
   .get(registrationController.new);
+
+router.route('/reviews/new')
+  .post(reviewController.create);
 
 router.route('/registrations')
   .post(registrationController.create);
@@ -37,6 +41,8 @@ router.route('/sites/:id')
   .get(siteController.show)
   .put(siteController.update)
   .delete(siteController.delete);
+
+
 
 
 

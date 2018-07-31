@@ -1,0 +1,10 @@
+<% site.reviews.forEach(review => { %>
+  <div class="columns">
+    <div class="column is-11">
+      <p>
+        <span class="author"><%= review.name %>:</span>
+        <%= review.content%>
+      </p>
+    </div>
+  </div
+<% }) %>

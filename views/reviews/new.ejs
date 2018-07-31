@@ -1,0 +1,12 @@
+<form action="/sites/new" method="POST">
+  <div class="field">
+    <label for="content">Write a review</label>
+    <textarea class="textarea" name="content"></textarea>
+  </div>
+
+  <input type="hidden" name="name" value="<%= locals.user.username %>">
+
+  <div class="field">
+    <button class="button is-primary">Submit</button>
+  </div>
+</form>

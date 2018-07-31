@@ -7,7 +7,8 @@ const siteSchema = new mongoose.Schema({
   picture: {type: String},
   commonSpecies: { type: String},
   difficultyLevel: { type: String},
-  description: {type: String}
+  description: {type: String},
+  reviews: [{author: String, content: String}]
 });
 
 module.exports = mongoose.model('Site', siteSchema);
