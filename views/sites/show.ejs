@@ -9,16 +9,12 @@
     <p><%= site.description %></p>
   </div>
 </div>
-
+<% if(locals.isLoggedIn) { %>
 <div class="container">
   <div class="level is-mobile">
     <div class="level-left ">
       <a class="button is-info" href="/sites/<%= site.id %>/edit">Edit</a>
     </div>
-
-    <%# <div class="level-center is-one-third-mobile">
-      <a class="button is-primary" href="/reviews/new">Review</a>
-    </div> %>
 
     <div class="level-right">
       <form action="/sites/<%= site.id %>" method="POST">
@@ -28,9 +24,7 @@
     </div>
   </div>
 </div>
-
-<div class="columns">
-  <div class="column is-full">
-    <%- include('../reviews/new', { site })%>
-  </div>
+<% } %>
+<div class="">
+  <%- include('../reviews/new', { site })%>
 </div>
