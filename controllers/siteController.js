@@ -47,7 +47,7 @@ function sitesDelete(req, res) {
   console.log('we are in sitesDelete');
   Site
     .findByIdAndDelete(req.params.id)
-    .then(() => res.redirect('/sites/index'))
+    .then(() => res.redirect('/sites'))
     .catch(err => console.log(err));
 }
 

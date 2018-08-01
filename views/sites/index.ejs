@@ -1,11 +1,12 @@
-<h1 class="title is-1">All sites</h1>
+<h1 class="title is-1 has-text-white">All sites</h1>
 <div class="columns is-multiline">
   <% sites.forEach(site => { %>
-    <div class="column is-3">
+    <div id="sites-container" class="column is-3 has-background-grey">
       <a href="/sites/<%= site._id%>">
-        <img src='<%= site.picture %>' alt='Picture of <%= site.name %>' />
-        <h2 class="title is-2"><%= site.name %></h2>
-        <h3 class="subtitle is-2"><%= site.location %></h3>
+
+        <img class="image is-128x128" src='<%= site.picture %>' alt='Picture of <%= site.name %>' />
+        <h2 class="title is-4 has-text-white"><%= site.name %></h2>
+        <h3 class="subtitle is-5 has-text-white"><%= site.location %></h3>
       </a>
     </div>
     <% }) %>

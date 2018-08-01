@@ -1,19 +1,37 @@
 <% if(locals.message) { %>
   <div class="message is-danger">
-    <div class="message-body">
-      <%= message %>
-    </div>
+  <div class="message-body">
+  <%= message %>
   </div>
-<% } %>
+  </div>
+  <% } %>
 
-<form method="POST" action="/sessions">
-  <div class="field">
-    <label for="email">Email</label>
-    <input class="input" type="text" name="email" id="email">
+  <div class="container">
+    <form method="POST" action="/sessions">
+
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="field">
+            <label class="has-text-white" for="email">Email</label>
+            <input class="input" type="text" name="email" id="email">
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="field">
+            <label class="has-text-white" for="password">Password</label>
+            <input class="input" type="password" name="password" id="password">
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column isone-third is-offset-one-third">
+
+          <button class="button is-info">Login</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="field">
-    <label for="password">Password</label>
-    <input class="input" type="password" name="password" id="password">
-  </div>
-  <button class="button is-info">Login</button>
-</form>
