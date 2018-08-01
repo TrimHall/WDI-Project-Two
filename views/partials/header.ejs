@@ -1,17 +1,53 @@
 <nav class="navbar is-info">
   <div class="container">
-    <div class="navbar-left">
-      <div class="navbar-brand">
+    <div class="navbar-brand">
+      <figure class="image is-96x96">
+        <img src="https://res.cloudinary.com/teepublic/image/private/s--UiWmKxBE--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1512111245/production/designs/2125678_1.jpg">
+      </figure>
+      <span class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        <% if(locals.isLoggedIn) { %>
+          <a class ="navbar-item item" href="/">Home</a>
+          <a class ="navbar-item item" href="/_about">About</a>
+          <a class ="navbar-item item" href="/sites">All sites</a>
+          <a class ="navbar-item item" href="/sites/new">Add site</a>
+          <a class ="navbar-item item" href="/sessions/delete">Log out</a>
+          <%  }  %>
+        </div>
       </div>
     </div>
-    <div class="navbar-right">
-      <div class="navbar-menu">
-        <figure class="image is-96x96">
-          <img src="https://img.memecdn.com/scuba-diver-baby_o_2364769.jpg">
-          <!-- <img src="https://res.cloudinary.com/teepublic/image/private/s--UiWmKxBE--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1512111245/production/designs/2125678_1.jpg"> -->
-        </figure>
+  </nav>
+
+  <script type="text/javascript">
+  (function() {
+    const burger = document.querySelector('burger');
+    const nav = document.querySelectorAll('navbar-item');
+    // const nav = document.querySelector('#'+burger.dataset.target)
+
+    burger.addEventListener('click', function() {
+      console.log('clicked');
+      burger.classList.toggle('is-active');
+      nav.classList.toggle('is-active');
+    });
+  });
+
+  </script>
+
+
+
+
+
+    <!-- <div class="navbar-right">
+      <div class="nav-toggle">
         <% if(locals.isLoggedIn) { %>
-            <a class ="navbar-item" href="/">Home</a>
+            <a class ="navbar-item is-active" href="/">Home</a>
             <a class ="navbar-item" href="/_about">About</a>
             <a class ="navbar-item" href="/sites">All sites</a>
             <a class ="navbar-item" href="/sites/new">Add site</a>
@@ -20,4 +56,4 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->

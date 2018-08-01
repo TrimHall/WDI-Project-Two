@@ -15,8 +15,6 @@ router.route('/registrations/new')
 router.route('/registrations')
   .post(registrationController.create);
 
-// router.route('/reviews/new')
-
 router.route('/sessions/new')
   .get(sessionController.new);
 

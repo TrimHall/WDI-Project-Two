@@ -1,11 +1,10 @@
 const Site = require('../models/site');
 
 function reviewsCreate(req, res) {
-  console.log('we are in reviews create controller');
+  console.log(req.body);
   Site
     .findById(req.params.siteId)
     .then(site => {
-      console.log('AT LEAST YOU GOT THIS FAR...');
       site.reviews.push(req.body);
       return site.save();
     })

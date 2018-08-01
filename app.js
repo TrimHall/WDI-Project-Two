@@ -7,13 +7,13 @@ mongoose.connect(DB_URI);
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const expressLayouts = require('express-ejs-layouts');
 const flash = require('express-flash');
 const session = require('express-session');
 const User = require('./models/user');
 
 
 
-const expressLayouts = require('express-ejs-layouts');
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.set('views', `${__dirname}/views`);

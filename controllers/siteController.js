@@ -13,6 +13,7 @@ function sitesShow(req, res) {
   const siteId = req.params.id;
   Site
     .findById(siteId)
+    .populate('reviews.author')
     .then(site => res.render('sites/show', {site}));
 }
 
