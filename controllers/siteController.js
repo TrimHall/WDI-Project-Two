@@ -25,7 +25,7 @@ function sitesCreate(req, res) {
   console.log(req.body);
   Site
     .create(req.body)
-    .then(() => res.redirect('/sites/index'))
+    .then(() => res.redirect('/sites'))
     .catch(err => console.log(err));
 }
 

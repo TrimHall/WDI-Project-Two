@@ -1,37 +1,55 @@
-<% if(locals.message) { %>
-  <div class="message is-danger">
-  <div class="message-body">
-  <%= message %>
-  </div>
-  </div>
-  <% } %>
 
-  <div class="container has-background-grey">
-    <form method="POST" action="/sessions">
+  <div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+    </header>
+    <section class="modal-card-body">
 
-      <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-          <div class="field">
-            <label class="has-text-white" for="email">Email</label>
-            <input class="input" type="text" name="email" id="email">
-          </div>
+      <% if(locals.message) { %>
+        <div class="message is-danger">
+        <div class="message-body">
+        <%= message %>
         </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-          <div class="field">
-            <label class="has-text-white" for="password">Password</label>
-            <input class="input" type="password" name="password" id="password">
-          </div>
         </div>
-      </div>
+        <% } %>
 
-      <div class="columns">
-        <div class="column is_half is-offset-one-quarter">
+        <div class="container">
+          <form method="POST" action="/sessions">
 
-          <button class="button is-info">Login</button>
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="has-text-black" for="email">Email</label>
+                  <input class="input" type="text" name="email" id="email">
+                </div>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="has-text-black" for="password">Password</label>
+                  <input class="input" type="password" name="password" id="password">
+                </div>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+
+                <button class="button is-info">Login</button>
+              </div>
+            </div>
+          </form>
         </div>
-      </div>
-    </form>
+
+
+    </section>
+    <footer class="modal-card-foot">
+      <%# <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button> %>
+    </footer>
   </div>
+</div>
