@@ -4,7 +4,7 @@ function sitesIndex(req, res) {
   Site
     .find()
     .then(sites => {
-      console.log(sites);
+      // console.log(sites);
       res.render('sites/index', {sites});
     });
 }
@@ -18,7 +18,9 @@ function sitesShow(req, res) {
 }
 
 function sitesNew(req, res) {
-  res.render('sites/new');
+  const previousPage = req.headers.referer;
+  console.log('the prev page is:', previousPage);
+  res.render('sites/new', {previousPage});
 }
 
 function sitesCreate(req, res) {
