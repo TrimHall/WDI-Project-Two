@@ -1,54 +1,73 @@
-<form action="/sites" method="POST">
-  <div class="field">
-    <label class="label" for="name">Name</label>
-    <div class="control">
-      <input type="text" name="name" class="input" placeholder="Enter dive site name">
-    </div>
+
+
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+
+      <form action="/sites" method="POST">
+        <div class="field">
+          <label class="label" for="name">Name</label>
+          <div class="control">
+            <input type="text" name="name" class="input" placeholder="Enter dive site name">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name">Location</label>
+          <div class="control">
+            <input type="text" name="location" class="input" placeholder="Where is it?">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name">Max. Depth</label>
+          <div class="control">
+            <input type="text" name="depth" class="input" placeholder="Deepest point on the site">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name">Picture</label>
+          <div class="control">
+            <input type="text" name="picture" class="input" placeholder="Enter an image URL">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name">Common Species</label>
+          <div class="control">
+            <input type="text" name="commonSpecies" class="input" placeholder="What can been seen there?">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name">Difficulty</label>
+          <div class="control">
+            <input type="text" name="difficultyLevel" class="input" placeholder="No current? Beginner. Some current? Intermediate. Dishwasher? Advanced.">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="name">Description</label>
+          <div class="control">
+            <input type="text" name="description" class="input" placeholder="A brief overview of the site">
+          </div>
+        </div>
+
+
+        <button class="button is-info">Add dive site</button>
+
+      </form>
+
+    </section>
+    <footer class="modal-card-foot">
+      <%# <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button> %>
+    </footer>
   </div>
-
-  <div class="field">
-    <label class="label" for="name">Location</label>
-    <div class="control">
-      <input type="text" name="location" class="input" placeholder="Where is it?">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" for="name">Max. Depth</label>
-    <div class="control">
-      <input type="text" name="depth" class="input" placeholder="Deepest point on the site">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" for="name">Picture</label>
-    <div class="control">
-      <input type="text" name="picture" class="input" placeholder="Enter an image URL">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" for="name">Common Species</label>
-    <div class="control">
-      <input type="text" name="commonSpecies" class="input" placeholder="What can been seen there?">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" for="name">Difficulty</label>
-    <div class="control">
-      <input type="text" name="difficultyLevel" class="input" placeholder="No current? Beginner. Some current? Intermediate. Dishwasher? Advanced.">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" for="name">Description</label>
-    <div class="control">
-      <input type="text" name="description" class="input" placeholder="A brief overview of the site">
-    </div>
-  </div>
-
-
-      <button class="button is-info">Add dive site</button>
-
-</form>
+</div>
