@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/dive-sites');
 
+const { DB_URI } = require('../config/environment');
+
 const Site = require('../models/site');
 
 Site.collection.drop();
