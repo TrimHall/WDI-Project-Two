@@ -1,36 +1,4 @@
 @charset "UTF-8";
-body {
-  background-color: black;
-  background-image: url("http://www.thisisa2z.com/wp-content/uploads/2015/07/surface-half-underwater-photography-over-under-matty-smith-13.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; }
-  body #header {
-    background: #ffffff00; }
-  body #tagline {
-    margin-top: 28%;
-    color: white;
-    font-weight: bold;
-    font-size: 75px;
-    font-family: 'Yellowtail', cursive; }
-
-#buttons {
-  width: 100%;
-  margin-top: 20px; }
-
-#footer {
-  text-align: center;
-  background-color: #ffffff00;
-  position: absolute;
-  text-align: center;
-  bottom: 0px;
-  height: 20px;
-  width: 100%; }
-
-#sites-container {
-  margin: 5px; }
-
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6372,5 +6340,38 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+html {
+  background-color: #ffffff00; }
+
+body {
+  background-color: black;
+  background-image: url("http://www.thisisa2z.com/wp-content/uploads/2015/07/surface-half-underwater-photography-over-under-matty-smith-13.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - $footerHeight); }
+  body #header {
+    background: #ffffff00; }
+  body #tagline {
+    margin-top: 28%;
+    color: white;
+    font-weight: bold;
+    font-size: 75px;
+    font-family: 'Yellowtail', cursive; }
+
+#buttons {
+  width: 100%;
+  margin-top: 20px; }
+
+#footer {
+  text-align: center;
+  background-color: #ffffff00;
+  text-align: center;
+  height: 200px;
+  width: 100%; }
+
+#sites-container {
+  margin: 5px; }
 
 /*# sourceMappingURL=style.css.map */

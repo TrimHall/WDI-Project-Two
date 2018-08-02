@@ -1,12 +1,12 @@
-<form action="/sites/<%=site.id%>/review" method="POST">
+<form action="/sites/<%=site.id%>/reviews" method="POST">
   <div class="field">
-    <label for="content">Write a review</label>
+    <label class="has-text-white" for="content">Write a review:</label>
     <textarea class="textarea" name="content"></textarea>
   </div>
 
   <input type="hidden" name="author" value="<%= locals.user.id %>">
 
-  <div class="field">
-    <button class="button is-primary">Submit</button>
-  </div>
+
+    <button class="button is-primary"><% console.log('clicked') %>Submit</button>
+
 </form>

@@ -1,10 +1,20 @@
+@import "./partials/_variables";
+@import "../vendors/bulma/bulma.sass";
+
+$footerHeight: 200px;
+$darkColour: #ffffff00;
+
+html {
+  background-color: $darkColour;
+}
+
 body{
   background-color: black;
   background-image: url("http://www.thisisa2z.com/wp-content/uploads/2015/07/surface-half-underwater-photography-over-under-matty-smith-13.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - $footerHeight);
   #header {
     background: #ffffff00;
   }
@@ -23,14 +33,14 @@ body{
 }
 #footer {
   text-align: center;
-  background-color: #ffffff00;
-  position: absolute;
+  background-color: $darkColour;
+  // position: absolute;
   text-align: center;
-  bottom: 0px;
-  height: 20px;
+  // bottom: 0px;
+  height: $footerHeight;
   width: 100%;
 }
-// 
+//
 // #text-container{
 //   margin-top: 20px;
 //   #text-padding {
@@ -41,7 +51,3 @@ body{
 #sites-container {
   margin: 5px;
 }
-
-@import "./partials/_variables";
-
-@import "../vendors/bulma/bulma.sass";

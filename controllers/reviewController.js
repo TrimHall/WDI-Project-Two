@@ -1,6 +1,7 @@
 const Site = require('../models/site');
 
 function reviewsCreate(req, res) {
+  console.log('we are in the reviews create controller');
   console.log(req.body);
   Site
     .findById(req.params.siteId)
@@ -10,8 +11,6 @@ function reviewsCreate(req, res) {
     })
     .then(site => res.redirect(`/sites/${site.id}`))
     .catch(err => console.log(err));
-
-
 }
 
 
