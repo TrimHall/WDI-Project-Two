@@ -12,8 +12,6 @@ const flash = require('express-flash');
 const session = require('express-session');
 const User = require('./models/user');
 
-
-
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.set('views', `${__dirname}/views`);
