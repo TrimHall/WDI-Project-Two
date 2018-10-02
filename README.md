@@ -16,6 +16,8 @@ To create a RESTful multipage website which would allow users to review SCUBA di
 > - Delete a site
 > - Leave comments/reviews for a site
 
+<img src="./public/dive-down-comment.gif">
+
 # Technologies
 
 > - JavaScript
@@ -35,4 +37,4 @@ The major blocker in this project was the use of EJS, as I had only been working
 
 ## To do:
 
-The app was originally built mobile-first, as this is what most users would interact with the site on in real life. Due to the deadline being moved forward by 2 days, I was unable to complete the styling and therefore had to make a quick desktop version for delivery. I will update the styling for this once I have time. 
+The app was originally built mobile-first, as this is what most users would interact with the site on in real life. Due to the deadline being moved forward by 2 days, I was unable to complete the styling and therefore had to make a quick desktop version for delivery. I will update the styling for this once I have time.
