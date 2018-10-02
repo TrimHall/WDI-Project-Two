@@ -16,7 +16,7 @@ To create a RESTful multipage website which would allow users to review SCUBA di
 > - Delete a site
 > - Leave comments/reviews for a site
 
-<img src="./public/images/dive-down-comment.gif" style="height: 250px;">
+<img src="./public/images/dive-down-comment.gif" style="height: 250px">
 
 # Technologies
 
